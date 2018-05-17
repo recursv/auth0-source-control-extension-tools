@@ -4,6 +4,7 @@ const connections = require('./connections');
 const clients = require('./clients');
 const ruleConfigs = require('./ruleConfigs');
 const resourceServers = require('./resourceServers');
+const emailTemplates = require('./emailTemplates');
 
 module.exports = {
   /* Connection and database operations */
@@ -17,6 +18,9 @@ module.exports = {
 
   /* Rule Configs operations */
   updateRuleConfigs: ruleConfigs.updateRuleConfigs,
+
+  /* Email Template operations */
+  updateEmailTemplates: emailTemplates.updateEmailTemplates,
 
   /* Client operations */
   validateClients: clients.validateClients,

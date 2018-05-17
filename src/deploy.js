@@ -93,6 +93,12 @@ module.exports = function(progressData, context, client, storage, config, slackT
       return auth0.updateRuleConfigs(progress, context.ruleConfigs, config);
     })
     .then(function() {
+      return auth0.updateEmailTemplates(progress, client, context.emailTemplates);
+    })
+    .then(function() {
+      return auth0.updateRuleConfigs(progress, context.ruleConfigs, config);
+    })
+    .then(function() {
       return auth0.updateResourceServers(progress, client);
     })
     .then(function() {
